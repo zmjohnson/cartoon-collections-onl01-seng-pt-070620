@@ -1,7 +1,8 @@
 dwarves = ["Doc","Dopey,""Bashful","Grumpy"]
 def roll_call_dwarves(array)
   i = 0 
-  while i < array.length 
+  while i < array.length
+    
   
   # Your code here
 end
