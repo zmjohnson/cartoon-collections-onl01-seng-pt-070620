@@ -18,9 +18,9 @@ def summon_captain_planet(array)
   end 
   nu_array
 end
-
-summon_captain_planet(planeteer_calls)
 planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
+summon_captain_planet(planeteer_calls)
+
 
 def long_planeteer_calls(array) 
   i = 0 
