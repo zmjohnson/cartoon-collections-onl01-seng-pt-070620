@@ -32,7 +32,7 @@ def long_planeteer_calls(array)
   end 
 end
 
-long_planeteer_calls(call_locations)
+long_planeteer_calls(caller_locations)
 
 cheese_types = ["cheddar", "gouda", "camembert"]
 snacks = ["crackers", "gouda", "thyme"]
