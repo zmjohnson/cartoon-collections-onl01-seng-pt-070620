@@ -1,61 +1,29 @@
-dwarves = ["Doc","Dopey","Bashful","Grumpy"]
-def roll_call_dwarves(array)
-  i = 0 
-  while i < array.length
-    puts "#{i + 1}. #{array[i]}"
-    i += 1 
-  end 
+
+def roll_call_dwarves(dwarves)
+  dwarves.each_with_index do |name, index|
+    index += 1
+    puts "#{index}. #{name}"
+  end
 end
 
-roll_call_dwarves(dwarves)
-
-def summon_captain_planet(array)
-  nu_array = []
-  i = 0 
-  while i < array.length 
-    nu_array << array[i].capitalize + "!"
-    i += 1 
-  end 
-  nu_array
-end
-planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
-summon_captain_planet(planeteer_calls)
-
-
-def long_planeteer_calls(array) 
-  i = 0 
-  if  array.any? {|i| i.length > 4}
-    return true
-  else 
-    return false
-  i = i + 1
-  end 
+def summon_captain_planet(planeteer_calls)
+  planeteer_calls.collect do |call|
+    call.capitalize << "!"
+  end
 end
 
-long_planeteer_calls(caller_locations)
-
-cheese_types = ["cheddar", "gouda", "camembert"]
-snacks = ["crackers", "gouda", "thyme"]
-
+def long_planeteer_calls(calls)
+  calls.any? do |call|
+    call.length > 4
+  end
+end
 
 def find_the_cheese(array)
+  # the array below is here to help
+  i = 0
   cheese_types = ["cheddar", "gouda", "camembert"]
-    array.find do |type|
-    cheese_types.include?(type)
-  end 
+  while i < cheese_types.length
+    return cheese_types[i] if array.include?(cheese_types[i])
+    i += 1
+  end
 end
-
-find_the_cheese(snacks)
-
-
-cheese_types = ["cheddar", "gouda", "camembert"]
-snacks = ["crackers", "gouda", "thyme"]
-
-def find_the_cheese2(array, array2)
-  cheese_types = array2
-    array.find do |type|
-    cheese_types.include?(type)
-  end 
-end
-
-find_the_cheese2(snacks, cheese_types)
